@@ -4,8 +4,7 @@ sevices:
   - docker
 
 before_install:
-  - docker build -f ./client/Dockerfile.dev -t yomarguti/react-test  ./client
-
+  - docker build -t yomarguti/react-test -f ./client/Dockerfile.dev ./client
 scripts:
   - docker run -e CI=true yomarguti/react-test npm test
 
